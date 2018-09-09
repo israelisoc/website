@@ -1,0 +1,18 @@
+.service-icon {
+  background-color: $white;
+  color: $primary;
+  height: 7rem;
+  width: 7rem;
+  display: block;
+  line-height: 7.5rem;
+  font-size: 2.25rem;
+  box-shadow: 0 0 1px 0 rgba(0, 0, 0, 1) inset;
+  border: 1px solid rgb(255,255,255);
+}
+.service-icon:hover {
+  box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 1) inset;
+}
+
+.service-icon-main {
+  box-shadow: 0 0 1px 0 rgba(0, 0, 0, 1) inset, 0px 0px 20px rgba(255,255,255, 0);
+}

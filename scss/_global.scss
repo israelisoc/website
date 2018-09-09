@@ -1,0 +1,190 @@
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  @include body-font;
+}
+
+// Custom Button Size
+.btn-xl {
+  padding: 1.25rem 2.5rem;
+}
+
+// Content Section
+.content-section {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.content-section-heading {
+  h2 {
+    font-size: 3rem;
+  }
+  h3 {
+    font-size: 1rem;
+    text-transform: uppercase;
+  }
+}
+
+// Typography
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
+
+.text-faded {
+  color: fade-out($white, 0.3);
+}
+
+/* Map */
+
+.map {
+  height: 30rem;
+}
+
+@media(max-width: 992px) {
+  .map {
+    height: 75%;
+  }
+}
+
+.map iframe {
+  pointer-events: none;
+}
+
+// Scroll to top button
+.scroll-to-top {
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+
+  display: none;
+
+  width: 50px;
+  height: 50px;
+
+  text-align: center;
+
+  color: white;
+  background: fade-out($gray-800, .5);
+
+  line-height: 45px;
+  &:focus,
+  &:hover {
+    color: white;
+  }
+  &:hover {
+    background: $gray-800;
+  }
+  i {
+    font-weight: 800;
+  }
+}
+
+//custom
+
+.cust-quotes {
+  height: 100px;
+  position:relative;
+}
+
+.cust-quotes blockquote {
+  margin: 0;
+  width: 100%;
+  position: absolute;
+  font-size: 14px;
+  text-align: center;
+  opacity: 0;
+  z-index: 0;
+  transition: opacity 0.5s ease-out 0s, transform 0.5s ease-in 0s;
+}
+
+/* IE < 10 fallback */
+.no-csstransitions .cust-quotes blockquote,
+.no-csstransforms .cust-quotes blockquote {
+   position:relative;
+}
+
+.cust-quotes blockquote:first-child {
+    opacity: 0;
+    transform: translateY(-10px) scale(1.1);
+}
+.cust-quotes blockquote:first-child + blockquote {
+    opacity: 1;
+    z-index: 1;
+    transition: opacity 1.6s ease 0s;
+}
+.cust-quotes blockquote p{
+  font-size:24px;
+  font-weight:normal;
+  font-style:italic;
+  color:#353535;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+.cust-quotes blockquote p:before {
+   content: '\201C';
+}
+.cust-quotes blockquote p:after {
+   content: '\201D';
+}
+.cust-quotes blockquote cite {
+    text-align: center;
+    font-size: 14px;
+    color: #898989;
+}
+.cust-quotes blockquote cite a {
+  font-size:14px;
+  font-weight:normal;
+}
+
+.crop {
+  object-fit: cover;
+  height: 200px;
+  width: 200px;
+}
+
+.sponsor img{
+  max-width: 200px;
+  max-height: 100px;
+}
+
+.logo {
+  position: absolute;
+  z-index: 1;
+  width: 15%;
+  margin: 30px;
+}
+
+.expandable {
+  background-color: $white;
+  color: $black;
+  padding: 15px;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+.no-text-decoration{
+  text-decoration: none !important;
+}
+
+.profile{
+  margin-top: 25px;
+}
+.profile h1{
+  font-weight: normal;
+  font-size: 20px;
+  margin:10px 0 0 0;
+}
+.profile h2{
+  font-size: 14px;
+  font-weight: lighter;
+  margin-top: 5px;
+}
